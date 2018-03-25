@@ -1,0 +1,9 @@
+Package: ArchMethods
+Title: Tools for analyzing archaeological data
+Version: 0.0.0.9000
+Authors@R: c(person("Elizabeth", "Siniscalchi", "esiniscalchi@mail.usf.edu", c("aut", "cre"))
+Description: This package enables archaeologists to document and make explicit the methodical process of archaeological data. Archaeologists can use this model to describe aspects such as the physical measurements of artifacts and their radiocarbon dates by using tempo plots. Other features of this package include codes for using spatial data for point pattern analysis to explore archaeological evidence in terms of the landscape where remains were found so that archaeologists may conduct simulations and other exploratory data visualizations, in addition to considering occupation as a function of geographic variables using logical regression. To illustrate these tools, this package borrows data from various sites in Azerbaijan that contain archaeological evidence of mammalian, pottery, and architectural remains from Chalcolithic to Neolithic periods.
+Depends: R (>= 3.4.2)
+License: CCO
+Encoding: UTF-8
+LazyData: true
