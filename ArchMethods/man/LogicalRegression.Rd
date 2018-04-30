@@ -1,6 +1,5 @@
 \name{LogicalRegression.R}
 \alias{LogicalRegression.R}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Geographic variables using logical regression
 }
