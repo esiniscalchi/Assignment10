@@ -115,7 +115,6 @@ legend("bottomleft",
        col = c("red", "blue"))
 
 # QUERYING SPATIAL DATA 
-point pattern analysis visualizations
 
 # Visualisation of raw patterns
 main.pp <- as.ppp(main.sites) # Coerce into 'ppp' object for spatial statistics
@@ -254,7 +253,7 @@ form6 <- formula(LGM ~ t_avg_y + p_avg_y)
 form7 <- formula(LGM ~ elev + slope + t_avg_y + p_avg_y)
 form8 <- formula(LGM~ .) # All variables for step-wise procedure
 
-#Build models
+# Build models
 mod.0  <-  glm(form0, family = binomial, data = dat2)
 mod.1  <-  glm(form1, family = binomial, data = dat2)
 mod.2  <-  glm(form2, family = binomial, data = dat2)
@@ -265,7 +264,7 @@ mod.6  <-  glm(form6, family = binomial, data = dat2)
 mod.7  <-  glm(form7, family = binomial, data = dat2)
 mod.8 <-   stepAIC(glm(form8, family = binomial, data = dat3))
 
-#Summarize AIC results, including weightings. Using modaicavg package
+# Summarize AIC results, including weightings. Using modaicavg package
 mods <-
   list(mod.0,
        mod.1, 
@@ -292,21 +291,21 @@ aictab(mods, modnames, second.ord = T)
 
 summary(mod.8)
 
-#Coefficient plot for model
+# Coefficient plot for model
 coefplot2(mod.8,
           main = "Model 8", 
           col = 'blue', 
           cex.pts = 1.3,
           intercept = FALSE)
 
-#List coefficients
+# List coefficients
 rownames(summary(mod.8)$coefficients)
 
-#Odds ratios and 95% CI
+# Odds ratios and 95% CI
 ORs<- exp(cbind(OR = coef(mod.8), confint(mod.8)))[-1,] # Intercept
 ORs
 
-#Summary
+# Summary
 sessionInfo()
 
 # MEANS
@@ -318,9 +317,6 @@ MeansByTimePeriod <- function(x){
   print(xTimePeriodMeans)
 }
 
-# Example
-MeansByTimePeriod(MSKUDATA$Journal.Articles.Accessed)
-
 MeansByArchaeologicalSite <- function(x){
   OvcularTepsei<-mean(x[1:12])
   MenteshTepe<-mean(x[13:24])
@@ -329,15 +325,9 @@ MeansByArchaeologicalSite <- function(x){
   print(xArchaeologicalSiteMeans)
 }
 
-# Example
-MeansByYear(MSKUDATA$Journal.Articles.Accessed)
-
 MeansByArchaeologicalEvidence <- function(x){
   xMammalian<-mean(x[1:12])
   xPottery<-mean(x[13:24])
   xArchitecturalEvidenceMeans<-cbind(xMammalian, xPottery, xArchitecturalRemains)
   print(xArchaeologicalEvidenceMeans)
 }
-
-# Example
-MeansByYear(MSKUDATA$Journal.Articles.Accessed)
