@@ -1,6 +1,6 @@
 # OCCUPATION AS A FUNCTION OF GEOGRAPHIC VARIALES USING LOGICAL REGRESSION
 
-fileName <- "Test_Iberia.csv" # Set file name
+fileName <- "File.csv" # Set file name
 dat <- read.csv(fileName, header=T) # Read in data
 head(dat) # View/check data
 
@@ -11,8 +11,8 @@ map_elev <-
          aes(X, 
              Y,
              colour = elev)) +
-  geom_point(size = 2,
-             shape = 15) +
+  geom_point(size = "Number",
+             shape = "Number") +
   scale_color_viridis() +
   theme_minimal() + 
   coord_equal() +
@@ -23,12 +23,12 @@ map_precip  <-
          aes(X, 
              Y,
              colour = p_min_spr)) +
-  geom_point(size = 2,
-             shape = 15) +
+  geom_point(size = "Number",
+             shape = "Number") +
   scale_color_viridis(option = "C") +
   theme_minimal() + 
   coord_equal() +
-  ggtitle("Study area with precipitation")
+  ggtitle("Desired Title for Chart")
 
 library(gridExtra)
 grid.arrange(map_elev, map_precip)
@@ -47,7 +47,7 @@ Absences <- subset(dat1, dat1$LGM == 0)[sample(c(1:dim(dat1)[1]), numAbsences),]
 dat2 <- rbind(Presences, Absences)
 
 # Data table for forward selection (stepAIC)
-dat3 <- dat2[,c(2, 5, 6, 7, 8, 9, 10)]
+dat3 <- dat2[,c(2, 5, 6, 7, 8, 9, 10)] # Random sample set of numbers that should be inserted as desired
 # View/check data
 head(dat3)
 
@@ -63,15 +63,15 @@ form7 <- formula(LGM ~ elev + slope + t_avg_y + p_avg_y)
 form8 <- formula(LGM~ .) # All variables for step-wise procedure
 
 # Build models
-mod.0  <-  glm(form0, family = binomial, data = dat2)
-mod.1  <-  glm(form1, family = binomial, data = dat2)
-mod.2  <-  glm(form2, family = binomial, data = dat2)
-mod.3  <-  glm(form3, family = binomial, data = dat2)
-mod.4  <-  glm(form4, family = binomial, data = dat2)
-mod.5  <-  glm(form5, family = binomial, data = dat2)
-mod.6  <-  glm(form6, family = binomial, data = dat2)
-mod.7  <-  glm(form7, family = binomial, data = dat2)
-mod.8 <-   stepAIC(glm(form8, family = binomial, data = dat3))
+mod.0  <-  glm(form0, family = "define", data = dat2)
+mod.1  <-  glm(form1, family = "define", data = dat2)
+mod.2  <-  glm(form2, family = "define", data = dat2)
+mod.3  <-  glm(form3, family = "define", data = dat2)
+mod.4  <-  glm(form4, family = "define", data = dat2)
+mod.5  <-  glm(form5, family = "define", data = dat2)
+mod.6  <-  glm(form6, family = "define", data = dat2)
+mod.7  <-  glm(form7, family = "define", data = dat2)
+mod.8 <-   stepAIC(glm(form8, family = "define", data = dat3))
 
 # Summarize AIC results, including weightings. Using modaicavg package
 mods <-
