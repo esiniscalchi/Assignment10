@@ -1,25 +1,25 @@
-#FUNCTIONS
+# FUNCTIONS
 
 # TEMPO PLOTS IN R FOR ANALYZING RADIOCARBON DATES
 
-#Yield the MCMC output
+# Yield the MCMC output
 MCMC_sample("loi-mcmc", 25, 100000)
 
-#Read the MCMC output
+# Read the MCMC output
 mcmc <- readr::read_csv("loi-mcmc.csv") # convert colnames to read.csv style
 names(mcmc) <- make.names(names(mcmc))
 
 colnames(mcmc)
 
-#Select and confirm columns to plot
+# Select and confirm columns to plot
 i <- c(43, 46, 49, 52, 55, 58, 61, 64, 67, 70, 73, 76, 79, 82, 85, 88)
 mcmc.select <- mcmc[,i]
 colnames(mcmc.select)
 
-#Load and run calc.tempo function
+# Load and run calc.tempo function
 source("tempo-plot-demo-saa-2017.r")
 
-calc.tempo #used to calculate the tempo plot
+calc.tempo # Used to calculate the tempo plot
 
 calc.tempo <- function(mcmc.data, by.int, out.file="") {
   years <- seq(from = floor(min(mcmc.data)), to = ceiling(max(mcmc.data)), by = by.int)
@@ -39,13 +39,13 @@ calc.tempo <- function(mcmc.data, by.int, out.file="") {
   return(res.df)
 }
 
-#Access the data
+# Access the data
 loi.tempo <- calc.tempo(mcmc.data = mcmc.select, by.in = 10, out.file = "loi-tempo.csv")
 
-#Check calc.tempo outpout
+# Check calc.tempo outpout
 summary(loi.tempo)
 
-#Example plot with plot.tempo
+# Example plot with plot.tempo
 plot.tempo <- function(tempo.data = NULL, in.file = "",  out.file = "", max.x = NA,
                        min.x = NA, y.label = "Cumulative Events",
                        x.label = "Calendar Year", plot.ht = 7,
@@ -75,7 +75,7 @@ plot.tempo <- function(tempo.data = NULL, in.file = "",  out.file = "", max.x = 
 
 plot.tempo(tempo.data = loi.tempo, out.file = "loi-tempo.png", plot.ht = 3)
 
-#Summary
+# Summary
 sessionInfo()
 
 # POINT PATTERN ANALYSIS
@@ -117,37 +117,37 @@ legend("bottomleft",
 # QUERYING SPATIAL DATA 
 point pattern analysis visualizations
 
-#Visualisation of raw patterns
+# Visualisation of raw patterns
 main.pp <- as.ppp(main.sites) # Coerce into 'ppp' object for spatial statistics
 secondary.pp <- as.ppp(secondary.sites)
 sites.pp <- superimpose(main.pp, secondary.pp)
 intensity(sites.pp)  # Measure intensity of different patterns
 
-#Compute the intensity
+# Compute the intensity
 allsites <- unmark(sites.pp) # removes "marks" (i.e. descriptors) from point pattern
 intensity(allsites) # Intensity (points/unit of area) = 131.0494
 
-#Additional visualisations and stats
+# Additional visualisations and stats
 plot(d.sites, main = "Density of all sites") # Plot interpolated values
 plot(sites.pp, add = T)
 
-#Two different types of sites
+# Two different types of sites
 par(mfrow=c(1,2)) # Set number of plotting rows to 1 and number of columns to 2
 plot(density(main.pp), main = "Density of primary settlements")
 plot(density(secondary.pp), main = "Density of satellite settlements")
 
-#Significant spatial relationships
+# Significant spatial relationships
 clarkevans.test(secondary.pp, correction = c("Donnelly"), nsim = 999)
 clarkevans.test(main.pp, correction = c("Donnelly"), nsim = 999) 
 
-#Exploring spatial relationships: pair-correlation function
+# Exploring spatial relationships: pair-correlation function
 plot(pcfcross(
   sites.pp, 
   divisor = "d", 
   correction = "Ripley"), 
   main = "Bivariate pair-correlation function")
 
-#Compare data against the empirical pattern
+# Compare data against the empirical pattern
 bivar <- envelope(
   fun = pcfcross, 
   sites.pp, 
@@ -157,7 +157,7 @@ bivar <- envelope(
 ) 
 plot(bivar, main = "Pair-correlation function, with simulation envelope")
 
-#Point process modelling
+# Point process modelling
 pwin <- as.owin(c(-0.1, 1.1, -0.1, 1.1)) # 
 main.pp$window <- pwin # Assign window
 pden <- density(main.pp) # Kernel density estimate of primary settlement sites, to act as covariate
@@ -187,14 +187,14 @@ abline(v = 0.18, col = "purple")
 plot(predict(fit.sec), main = "Predicted distribution", col = rainbow(255))
 points(secondary.pp)
 
-#Summary
+# Summary
 sessionInfo()
 
 # OCCUPATION AS A FUNCTION OF GEOGRAPHIC VARIALES USING LOGICAL REGRESSION
 
 fileName <- "Test_Iberia.csv" # Set file name
 dat <- read.csv(fileName, header=T) # Read in data
-head(dat) #View/check data
+head(dat) # View/check data
 
 library(ggplot2)
 library(viridis)
@@ -228,23 +228,23 @@ grid.arrange(map_elev, map_precip)
 dat1 <- as.data.frame(cbind(dat[,c(1:4)], (scale(dat[,-c(1:4)])))) # Standardization of predictors
 str(dat1) # Verification (make sure the vars are numerical)
 
-#Determine absences
-## ----- Tease apart presences and absences, then select a subset of absences - recombine presences (all) and absences (sample)
+# Determine absences
+# Tease apart presences and absences, then select a subset of absences and recombine presences (all) and absences (sample)
 numAbsences <- 350 ## 10x presences
 
 Presences <- subset(dat1, dat1$LGM == 1)
 Absences <- subset(dat1, dat1$LGM == 0)[sample(c(1:dim(dat1)[1]), numAbsences),]
 
-## ----- Final data on which analyses will be run
+# Final data on which analyses will be run
 dat2 <- rbind(Presences, Absences)
 
-## ----- data table for forward selection (stepAIC)
+# Data table for forward selection (stepAIC)
 dat3 <- dat2[,c(2, 5, 6, 7, 8, 9, 10)]
-## ----- View/check data
+# View/check data
 head(dat3)
 
-#Modelling - define formulae
-form0 <- formula(LGM ~ 1) #intercept only model
+# Modelling - define formulae
+form0 <- formula(LGM ~ 1) # Intercept only model
 form1 <- formula(LGM ~ Y + X)
 form2 <- formula(LGM ~ elev + slope)
 form3 <- formula(LGM ~ t_min_y)
@@ -252,8 +252,7 @@ form4 <- formula(LGM ~ elev + slope + p_min_spr)
 form5 <- formula(LGM ~ p_min_spr + t_min_y)
 form6 <- formula(LGM ~ t_avg_y + p_avg_y)
 form7 <- formula(LGM ~ elev + slope + t_avg_y + p_avg_y)
-form8 <- formula(LGM~ .) ## all variables for step-wise procedure
-## all variables for step-wise procedure
+form8 <- formula(LGM~ .) # All variables for step-wise procedure
 
 #Build models
 mod.0  <-  glm(form0, family = binomial, data = dat2)
@@ -293,7 +292,7 @@ aictab(mods, modnames, second.ord = T)
 
 summary(mod.8)
 
-#Coefficient Plot for model
+#Coefficient plot for model
 coefplot2(mod.8,
           main = "Model 8", 
           col = 'blue', 
@@ -304,13 +303,13 @@ coefplot2(mod.8,
 rownames(summary(mod.8)$coefficients)
 
 #Odds ratios and 95% CI
-ORs<- exp(cbind(OR = coef(mod.8), confint(mod.8)))[-1,] ## Intercept OR shouldn't be interpreted.
+ORs<- exp(cbind(OR = coef(mod.8), confint(mod.8)))[-1,] # Intercept
 ORs
 
 #Summary
 sessionInfo()
 
-# CHARTED MEANs
+# MEANS
 MeansByTimePeriod <- function(x){
   xChalcolithic<-mean(x[1:24])
   xNeolithic<-mean(x[13:24])
@@ -320,7 +319,7 @@ MeansByTimePeriod <- function(x){
 }
 
 # Example
-MeansBy(MSKUDATA$Journal.Articles.Accessed)
+MeansByTimePeriod(MSKUDATA$Journal.Articles.Accessed)
 
 MeansByArchaeologicalSite <- function(x){
   OvcularTepsei<-mean(x[1:12])
