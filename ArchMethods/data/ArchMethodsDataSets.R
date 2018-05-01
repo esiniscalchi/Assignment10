@@ -25,11 +25,7 @@ Lab_no.DM Locus_no.  Ag Sn  Pb   Bi   P   S  Fe  Co Ni    Mo  Zn    As Cu Sum
 6  334.0000     23002 550 70  90  2.0   5  40  35 3.0 70   1.5  30 0.050 95  95
 
 \reference{
-Gailhard, N., Bode, M., Bakhshaliyev, V., Hauptmann, A., &
-Marro, C. (2017). Archaeometallurgical Investigations in
-Nakhchivan, Azerbaijan: What Does the Evidence
-from Late Chalcolithic Ovçular Tepesi Tell Us about
-the Beginning of Extractive Metallurgy? Journal of Field Archaeology 42(6), p. 530-550.
+Gailhard, N., Bode, M., Bakhshaliyev, V., Hauptmann, A., & Marro, C. (2017). Archaeometallurgical Investigations in Nakhchivan, Azerbaijan: What Does the Evidence from Late Chalcolithic Ovçular Tepesi Tell Us about the Beginning of Extractive Metallurgy? Journal of Field Archaeology 42(6), p. 530-550.
 }
 
 Pit <- c(01-171, 02-070, 08-051)
@@ -299,4 +295,23 @@ Number18
 
 \reference{
 Berthon, R. (2017). A ritual deposit of fox remains at Ovçular Tepesi (Nakhchivan, Azerbaijan) and its relation with the pastoral nature of Late Chalcolithic communities. Journal of Archaeological Science, 1-7.
+}
+
+> Locus <- c(5212, 5077, 5161, 5194, 5137, 5259, 5333, 11267)
+> RadiocarbonAge_BP <- c(5200-45, 5210-50, 5215-50, 5364-40, 5389-45, 5450-45, 5600-45, 5635-45)
+> Material <- c("Wood charcoal", "Seed", "Wood charcoal", "Wood charcoal", "Wood charcoal", "Wood charcoal", "Wood charcoal", "Wood charcoal")
+> RadiocarbonDates_SelectSamples_OvcularTepesi <- data.frame(SampleID, Locus, RadiocarbonAge_BP, Material)
+> RadiocarbonDates_SelectSamples_OvcularTepesi
+   SampleID Locus RadiocarbonAge_BP      Material
+1 LTL13320A  5212              5155 Wood charcoal
+2  LTL5311A  5077              5160          Seed
+3  LTL5312A  5161              5165 Wood charcoal
+4  LTL8087A  5194              5324 Wood charcoal
+5 LTL13319A  5137              5344 Wood charcoal
+6 LTL13321A  5259              5405 Wood charcoal
+7 LTL12565A  5333              5555 Wood charcoal
+8 LTL13323A 11267              5590 Wood charcoal
+
+\reference{
+Marro, C., Berthon, R., & Bakhshaliyev, V. (2014). On the Genesis of the Kura-Araxes phenomenon: New evidence from Nakhchivan (Azerbaijan). Paleorient 40(2), 131-154.
 }
