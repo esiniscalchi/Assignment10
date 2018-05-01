@@ -24,6 +24,14 @@ Lab_no.DM Locus_no.  Ag Sn  Pb   Bi   P   S  Fe  Co Ni    Mo  Zn    As Cu Sum
 5  326.7692      5007 420  3 580  0.7   5  10  35 0.3 20  40.0   7 0.011 95  95
 6  334.0000     23002 550 70  90  2.0   5  40  35 3.0 70   1.5  30 0.050 95  95
 
+\reference{
+Gailhard, N., Bode, M., Bakhshaliyev, V., Hauptmann, A., &
+Marro, C. (2017). Archaeometallurgical Investigations in
+Nakhchivan, Azerbaijan: What Does the Evidence
+from Late Chalcolithic Ovçular Tepesi Tell Us about
+the Beginning of Extractive Metallurgy? Journal of Field Archaeology 42(6), p. 530-550.
+}
+
 Pit <- c(01-171, 02-070, 08-051)
 > Volume_of_soil_sample <- c(285, 70, 445)
 > Number_of_seed_and_fruit_remains <- c(95, 73, 192)
@@ -35,6 +43,11 @@ Pit Volume_of_soil_sample Number_of_seed_and_fruit_remains Density Total
 1 -170                   285                               95    0.33   800
 2  -68                    70                               73    1.04   360
 3  -43                   445                              192    0.43     0
+
+\reference{
+Berthon,R., Decaix, A., Kovács, E.Z., Van Neer, W., Tengberg, M., Willcox, G., & Cucchi, T. A bioarchaeological investigation of three late
+Chalcolithic pits at Ovçular Tepesi (Nakhchivan, Azerbaijan). (2013). The Journal of Human Palaeoecology 13(3), 191-200.
+}
 
 Location <- c("Nakhchivan", "Nakhchivan", "Nakhchivan", "Nakhchivan", "Nakhchivan")
 Locality <- c("Dize", "Dize", "Dize", "Dize", "Dize")
@@ -50,6 +63,11 @@ MitochondrialDNA_Haplogroup_Nakhchivan
 [19] "JX889725"   "JX889726"   "A"          "B"          "A"          "B"         
 [25] "C"          "HG4"        "HG4"        "HG4"        "HG4"        "HG3"       
 [31] "Orkney"     "Orkney"     "Orkney"     "Orkney"     "TMC" 
+
+\reference{
+Cucchi, T., Kovacs, E.Z., Berthon, R., Orth, A., Bonhome, F., Evin, A., Siahsarvie, R., Darvish, J., Bakhshaliyev, V., & Marro, C. (2013). On the trail of Neolithic mice and men towards
+Transcaucasia: zooarchaeological clues from Nakhchivan (Azerbaijan). Biological Journal of the Linnean Society 108, 917-928.
+}
 
 Taxon <- c("Mus_sp", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_musculus", "Mus_musculus_musculus", "Mus_musculus_musculus", "Mus_musculus_musculus", "Mus_musculus_musculus", "Mus_musculus_musculus", "Mus_musculus_castaneus", "Mus_macedonicus_spretoides", "Mus_macedonicus_macedonicus")
 > Country <- c("Azerbaijan_Nakhchivan_A", "Azerbaijan_Nakhchivan_TG", "Israel_TG", "Iran_TG", "Syria_TG", "Syria_TG", "Syria_TG", "Syria_P", "Turkey_A", "Cyprus_A", "Georgia_TG", "Georgia_TG", "Georgia_TG", "Georgia_TG", "Georgia_TG", "Bulgaria_TG", "Iran_TG", "Israel_TG", "Georgia_TG")
@@ -119,6 +137,11 @@ Localities_Sites_Specimens_MusSpecies <- c(Taxon, Country, MapNumber, Localities
 [111] "N/A"                         "N/A"                        
 [113] "N/A"                         "N/A"  
 
+\reference{
+Cucchi, T., Kovacs, E.Z., Berthon, R., Orth, A., Bonhome, F., Evin, A., Siahsarvie, R., Darvish, J., Bakhshaliyev, V., & Marro, C. (2013). On the trail of Neolithic mice and men towards
+Transcaucasia: zooarchaeological clues from Nakhchivan (Azerbaijan). Biological Journal of the Linnean Society 108, 917-928.
+}
+
 > Animal <- c("Beaver", "Dog", "Red fox", "Probably wild boar", "Red deer", "Cattle", "Sheep and goat", "Included goat", "Included sheep", "Identified_NISP", "Unidentified", "Total_NR")
 > NumberOfRemains_1_171 <- c(1, 3, 1, "N/A", 1, 70, 1, 6, 76, 168, 244)
 > NumberOfRemains_1_171 <- c("N/A", 1, 3, 1, "N/A", 1, 70, 1, 6, 76, 168, 244)
@@ -152,6 +175,11 @@ Localities_Sites_Specimens_MusSpecies <- c(Taxon, Country, MapNumber, Localities
 [81] "N/A"                "N/A"                "24"                 "65"                
 [85] "N/A"               
 
+\reference{
+Berthon,R., Decaix, A., Kovács, E.Z., Van Neer, W., Tengberg, M., Willcox, G., & Cucchi, T. A bioarchaeological investigation of three late
+Chalcolithic pits at Ovçular Tepesi (Nakhchivan, Azerbaijan). (2013). The Journal of Human Palaeoecology 13(3), 191-200.
+}
+
 TypeOfFish <- c("SilurusGlanis_catfish", "StenodusLeucichthys_sheefish", "BarbusSp_barbel", "CapoetaCapoeta_SevenKhramulya", "CyprindaeIndet", "Total")
 > Pit1_171 <- c(2, 1, 1, 38, 693, 735)
 > Pit2_070 <- c(1, "-", "-", 14, 319, 334)
@@ -165,6 +193,11 @@ TypeOfFish Pit1_171 Pit2_070 Pit8_051
 4 CapoetaCapoeta_SevenKhramulya       38       14      121
 5                CyprindaeIndet      693      319     1334
 6                         Total      735      334     1458
+
+\reference{
+Berthon,R., Decaix, A., Kovács, E.Z., Van Neer, W., Tengberg, M., Willcox, G., & Cucchi, T. A bioarchaeological investigation of three late
+Chalcolithic pits at Ovçular Tepesi (Nakhchivan, Azerbaijan). (2013). The Journal of Human Palaeoecology 13(3), 191-200.
+}
 
 FindNumber <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36)
 > Element <- c("Pelvis", "Ulna", "Radius", "Mandible", "Mandible", "Scapula", "Scapula", "Scapula", "Calcaneum", "Talus", "Pelvis", "Carpal", "Metacarpals", "Phalanx prox A", "Tarsal", "Metatarsals", "Phalanges", "Calcaneum", "Talus", "Calcaneum", "Talus", "Scapula", "Ulna", "Radius", "Mandibule", "Pelvis", "7th cervical vertebra", "2nd thoracic vertebra", "1st thoracic vertebra", "Sesamoid P", "Calcaneum", "Phalanges", "Lower teeth", "Sesamoids P", "Sesamoids P" )
@@ -247,6 +280,10 @@ DepositLayer <- c(1, 1, 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 1, 2,
 [211] "Flotation upper soil"  "Flotation upper soil"  "Flotation upper soil" 
 [214] "Flotation upper soil"  "Flotation upper soil" 
 
+\reference{
+Berthon, R. (2017). A ritual deposit of fox remains at Ovçular Tepesi (Nakhchivan, Azerbaijan) and its relation with the pastoral nature of Late Chalcolithic communities. Journal of Archaeological Science, 1-7.
+}
+
 Element <- c("Mandible", "Mandible", "Mandible", "Vertebrae", "7th cervical vertebra", "1st thoracic vertebra", "1st thoracic vertebra", "2nd thoracic vertebra")
 FindNumber <- c("N/A", 4, 5, 25, "N/A", 27, 28, 30, 29)
 M1L <- c(16.3, 16.2, 16.2, "PL", 14.9, 13, 13.6, 12)
@@ -280,3 +317,6 @@ Number18
 7      N/A
 8      N/A
 
+\reference{
+Berthon, R. (2017). A ritual deposit of fox remains at Ovçular Tepesi (Nakhchivan, Azerbaijan) and its relation with the pastoral nature of Late Chalcolithic communities. Journal of Archaeological Science, 1-7.
+}
