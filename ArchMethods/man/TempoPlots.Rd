@@ -17,8 +17,6 @@ TempoPlots(x)
   \item{source }{Loads and runs calc.tempo function}
   \item{calc.tempo }{Used to calculate the tempo plot}
   \item{means }{Means of plots}
-  \item{NameOfFile }{Description of 'comp2'}
-  \item{summary }{Check calc.tempo outpout}
   \item{plot.tempo }{Example plot with plot.tempo}
 
 }
