@@ -1,4 +1,4 @@
-# TEMPO PLOTS IN R FOR ANALYZING RADIOCARBON DATES
+# TEMPO PLOTS IN R FOR ANALYZING RADIOCARBON DATES AND PHYSICAL MEASUREMENTS
 
 #' Yield MCMC Output Function
 #'
@@ -7,7 +7,7 @@
 #' @export
 #' @examples
 #' MCMC_sample()
-MCMC_sample <- c("loi-mcmc", 25, 100000) # This data is arbitrary and should be used for the desired data
+MCMC_sample <- c("loi-mcmc", 25, 100000) # This data is arbitrary and should be used with the desired data
 
 #' Read MCMC Output Function
 #'
