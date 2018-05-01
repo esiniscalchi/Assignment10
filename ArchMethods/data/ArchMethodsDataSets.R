@@ -71,71 +71,52 @@ Transcaucasia: zooarchaeological clues from Nakhchivan (Azerbaijan). Biological 
 
 Taxon <- c("Mus_sp", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_domesticus", "Mus_musculus_musculus", "Mus_musculus_musculus", "Mus_musculus_musculus", "Mus_musculus_musculus", "Mus_musculus_musculus", "Mus_musculus_musculus", "Mus_musculus_castaneus", "Mus_macedonicus_spretoides", "Mus_macedonicus_macedonicus")
 > Country <- c("Azerbaijan_Nakhchivan_A", "Azerbaijan_Nakhchivan_TG", "Israel_TG", "Iran_TG", "Syria_TG", "Syria_TG", "Syria_TG", "Syria_P", "Turkey_A", "Cyprus_A", "Georgia_TG", "Georgia_TG", "Georgia_TG", "Georgia_TG", "Georgia_TG", "Bulgaria_TG", "Iran_TG", "Israel_TG", "Georgia_TG")
-> MapNumber <- c(1, 2, 3, 4, 5, 6, 7, 7, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
+> MapNumber <- c("N/A", 1, 2, 3, 4, 5, 6, 7, 7, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
 > Localities_site <- c("Ovcular_Tepesi", "Dize_village", "Various", "Ahvaz", "Damascus", "Hamah", "Latakia", "Halula", "Cafer_Hoyuk", "Cap_Andreas_Kastros", "Alazani", "Lagodekhi", "Vachlavan", "Tibissi", "Chiracskaya", "Dobromir", "Espahan", "Various", "Various")
 > N <- c(46, 6, 33, 21, 2, 5, 5, 32, 23, 3, 1, 5, 2, 4, 3, 11, 36, 16, 18)
-HGc<- c("N/A", 3.4, 1.2.4.11, 3.7.9, 3, 3.6.10, 6.10, "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A")
-Error: unexpected numeric constant in "HGc<- c("N/A", 3.4, 1.2.4"
-> HGc<- c("N/A", 3-4, 1-2-4-11, 3-7-9, 3, 3-6-10, 6-10, "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A")
-Localities_Sites_Specimens_MusSpecies <- c(Taxon, Country, MapNumber, Localities_site, N, HGc)
+HGc<- c("N/A", 3.4, 1.2.4.11, 3.7.9, 3, 3.6.10, 6.10, "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A")
+> Localities_Sites_Specimens_MusSpecies <- data.frame(Taxon, Country, MapNumber, Localities_site, N, HGc)
 > Localities_Sites_Specimens_MusSpecies
-[1] "Mus_sp"                      "Mus_musculus_domesticus"    
-[3] "Mus_musculus_domesticus"     "Mus_musculus_domesticus"    
-[5] "Mus_musculus_domesticus"     "Mus_musculus_domesticus"    
-[7] "Mus_musculus_domesticus"     "Mus_musculus_domesticus"    
-[9] "Mus_musculus_domesticus"     "Mus_musculus_domesticus"    
-[11] "Mus_musculus_musculus"       "Mus_musculus_musculus"      
-[13] "Mus_musculus_musculus"       "Mus_musculus_musculus"      
-[15] "Mus_musculus_musculus"       "Mus_musculus_musculus"      
-[17] "Mus_musculus_castaneus"      "Mus_macedonicus_spretoides" 
-[19] "Mus_macedonicus_macedonicus" "Azerbaijan_Nakhchivan_A"    
-[21] "Azerbaijan_Nakhchivan_TG"    "Israel_TG"                  
-[23] "Iran_TG"                     "Syria_TG"                   
-[25] "Syria_TG"                    "Syria_TG"                   
-[27] "Syria_P"                     "Turkey_A"                   
-[29] "Cyprus_A"                    "Georgia_TG"                 
-[31] "Georgia_TG"                  "Georgia_TG"                 
-[33] "Georgia_TG"                  "Georgia_TG"                 
-[35] "Bulgaria_TG"                 "Iran_TG"                    
-[37] "Israel_TG"                   "Georgia_TG"                 
-[39] "1"                           "2"                          
-[41] "3"                           "4"                          
-[43] "5"                           "6"                          
-[45] "7"                           "7"                          
-[47] "7"                           "8"                          
-[49] "9"                           "10"                         
-[51] "11"                          "12"                         
-[53] "13"                          "14"                         
-[55] "15"                          "16"                         
-[57] "Ovcular_Tepesi"              "Dize_village"               
-[59] "Various"                     "Ahvaz"                      
-[61] "Damascus"                    "Hamah"                      
-[63] "Latakia"                     "Halula"                     
-[65] "Cafer_Hoyuk"                 "Cap_Andreas_Kastros"        
-[67] "Alazani"                     "Lagodekhi"                  
-[69] "Vachlavan"                   "Tibissi"                    
-[71] "Chiracskaya"                 "Dobromir"                   
-[73] "Espahan"                     "Various"                    
-[75] "Various"                     "46"                         
-[77] "6"                           "33"                         
-[79] "21"                          "2"                          
-[81] "5"                           "5"                          
-[83] "32"                          "23"                         
-[85] "3"                           "1"                          
-[87] "5"                           "2"                          
-[89] "4"                           "3"                          
-[91] "11"                          "36"                         
-[93] "16"                          "18"                         
-[95] "N/A"                         "-1"                         
-[97] "-16"                         "-13"                        
-[99] "3"                           "-13"                        
-[101] "-4"                          "N/A"                        
-[103] "N/A"                         "N/A"                        
-[105] "N/A"                         "N/A"                        
-[107] "N/A"                         "N/A"                        
-[109] "N/A"                         "N/A"                        
-[111] "N/A"                         "N/A"                        
-[113] "N/A"                         "N/A"  
+                         Taxon                  Country MapNumber
+1                       Mus_sp  Azerbaijan_Nakhchivan_A       N/A
+2      Mus_musculus_domesticus Azerbaijan_Nakhchivan_TG         1
+3      Mus_musculus_domesticus                Israel_TG         2
+4      Mus_musculus_domesticus                  Iran_TG         3
+5      Mus_musculus_domesticus                 Syria_TG         4
+6      Mus_musculus_domesticus                 Syria_TG         5
+7      Mus_musculus_domesticus                 Syria_TG         6
+8      Mus_musculus_domesticus                  Syria_P         7
+9      Mus_musculus_domesticus                 Turkey_A         7
+10     Mus_musculus_domesticus                 Cyprus_A         7
+11       Mus_musculus_musculus               Georgia_TG         8
+12       Mus_musculus_musculus               Georgia_TG         9
+13       Mus_musculus_musculus               Georgia_TG        10
+14       Mus_musculus_musculus               Georgia_TG        11
+15       Mus_musculus_musculus               Georgia_TG        12
+16       Mus_musculus_musculus              Bulgaria_TG        13
+17      Mus_musculus_castaneus                  Iran_TG        14
+18  Mus_macedonicus_spretoides                Israel_TG        15
+19 Mus_macedonicus_macedonicus               Georgia_TG        16
+       Localities_site  N HGc
+1       Ovcular_Tepesi 46 N/A
+2         Dize_village  6  -1
+3              Various 33 -16
+4                Ahvaz 21 -13
+5             Damascus  2   3
+6                Hamah  5 -13
+7              Latakia  5  -4
+8               Halula 32 N/A
+9          Cafer_Hoyuk 23 N/A
+10 Cap_Andreas_Kastros  3 N/A
+11             Alazani  1 N/A
+12           Lagodekhi  5 N/A
+13           Vachlavan  2 N/A
+14             Tibissi  4 N/A
+15         Chiracskaya  3 N/A
+16            Dobromir 11 N/A
+17             Espahan 36 N/A
+18             Various 16 N/A
+19             Various 18 N/A
 
 \reference{
 Cucchi, T., Kovacs, E.Z., Berthon, R., Orth, A., Bonhome, F., Evin, A., Siahsarvie, R., Darvish, J., Bakhshaliyev, V., & Marro, C. (2013). On the trail of Neolithic mice and men towards
@@ -145,8 +126,7 @@ Transcaucasia: zooarchaeological clues from Nakhchivan (Azerbaijan). Biological 
 > Animal <- c("Beaver", "Dog", "Red fox", "Probably wild boar", "Red deer", "Cattle", "Sheep and goat", "Included goat", "Included sheep", "Identified_NISP", "Unidentified", "Total_NR")
 > NumberOfRemains_1_171 <- c(1, 3, 1, "N/A", 1, 70, 1, 6, 76, 168, 244)
 > NumberOfRemains_1_171 <- c("N/A", 1, 3, 1, "N/A", 1, 70, 1, 6, 76, 168, 244)
-> NumberOfRemains_2_070 <- c("N/A", 1, 1, 2, 2, 3, 97, 4, 14, 14, 106, 326, 432)
-> NumberOfRemains_8_051 <- c(3, 4, 1, "N/A", 4, 3, 163, 8, 27, 178, 347, 525)
+> NumberOfRemains_2_070 <- c("N/A", 1, 1, 2, 2, 3, 97, 4, 14, 14, 106, 326, 432)>
 > Frequency_1_171 <- c("N/A", 1-3, 3-9, 3-1, "N/A", 1-3, 92-1, "N/A", "N/A", 31-1, 68-9, "N/A")
 > Frequency_2_070 <- c("N/A", 0-9, 0-9, 1-9, 1-9, 2-8, 91-5, "N/A", "N/A", 24-5, 75-5, "N/A")
 > Frequency_8_051 <- c(1-7, 2-2, 0-6, "N/A", 2-2, 1-7, 91-6, "N/A", "N/A", 33-9, 66-1, "N/A")
