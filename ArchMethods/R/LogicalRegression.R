@@ -3,17 +3,15 @@
 #' File Name Function
 #'
 #' This function allows you to set the file name.
-#' @param file.csv. Defaults to TRUE.
 #' @keywords fileName
 #' @export
 #' @examples
 #' fileName()
 fileName <- "File.csv" # Set file name
 
-#' A Data Reading Function
+#' Data Reading Function
 #'
 #' This function allows you to read the data in R.
-#' @param love Do you love cats? Defaults to TRUE.
 #' @keywords dat
 #' @export
 #' @examples
