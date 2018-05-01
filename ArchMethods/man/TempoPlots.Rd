@@ -14,9 +14,6 @@ TempoPlots(x)
   \item{mcmc }{Reads the MCMC output}
   \item{names }{lists names for mcmc output}
   \item{colnames }{creates a column of names for mcmc output}
-  \item{i }{Selects and confirms columns to plot}
-  \item{mcmc.select }{Selects and confirms columns to plot from "i"}
-  \item{colnames }{Selects and confirms columns to plot from mcmc.select}
   \item{source }{Loads and runs calc.tempo function}
   \item{calc.tempo }{Used to calculate the tempo plot}
   \item{means }{Means of plots}
