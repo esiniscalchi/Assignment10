@@ -27,7 +27,8 @@ Dye, T.S. (n.d.). Tempo Plots in R for Analysing Radiocarbon Dates. Retrieved fr
 Elizabeth Siniscalchi
 }
 \note{
-These functions are intended to be generic so that they may be used by anyone rather than with a specific set of archaeological data.
+These functions are intended to be generic so that they may be used with any archaeological data rather than with just one specific set of archaeological data.
+
 }
 
 \keyword{ Tempo }
