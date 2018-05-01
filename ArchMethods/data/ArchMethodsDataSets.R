@@ -120,36 +120,40 @@ Transcaucasia: zooarchaeological clues from Nakhchivan (Azerbaijan). Biological 
 }
 
 > Animal <- c("Beaver", "Dog", "Red fox", "Probably wild boar", "Red deer", "Cattle", "Sheep and goat", "Included goat", "Included sheep", "Identified_NISP", "Unidentified", "Total_NR")
-> NumberOfRemains_1_171 <- c(1, 3, 1, "N/A", 1, 70, 1, 6, 76, 168, 244)
 > NumberOfRemains_1_171 <- c("N/A", 1, 3, 1, "N/A", 1, 70, 1, 6, 76, 168, 244)
-> NumberOfRemains_2_070 <- c("N/A", 1, 1, 2, 2, 3, 97, 4, 14, 14, 106, 326, 432)>
+> NumberOfRemains_2_070 <- c(, 1, 1, 2, 2, 3, 97, 4, 14, 14, 106, 326, 432)>
+> NumberOfRemains_8_051 <- c(3, 4, 1, "N/A", 4, 3, 163, 8, 27, 178, 347, 525)
 > Frequency_1_171 <- c("N/A", 1-3, 3-9, 3-1, "N/A", 1-3, 92-1, "N/A", "N/A", 31-1, 68-9, "N/A")
 > Frequency_2_070 <- c("N/A", 0-9, 0-9, 1-9, 1-9, 2-8, 91-5, "N/A", "N/A", 24-5, 75-5, "N/A")
 > Frequency_8_051 <- c(1-7, 2-2, 0-6, "N/A", 2-2, 1-7, 91-6, "N/A", "N/A", 33-9, 66-1, "N/A")
-> NumberAndFrequencyLargeMammelsRemainsThreePits_Chalcolithic_OvcularTepesi <- c(Animal, NumberOfRemains_1_171, NumberOfRemains_2_070, NumberOfRemains_8_051, Frequency_1_171, Frequency_2_070, Frequency_8_051)
+> > NumberAndFrequencyLargeMammelsRemainsThreePits_Chalcolithic_OvcularTepesi <- data.frame(Animal, NumberOfRemains_1_171, NumberOfRemains_2_070, NumberOfRemains_8_051, Frequency_1_171, Frequency_2_070, Frequency_8_051)
 > NumberAndFrequencyLargeMammelsRemainsThreePits_Chalcolithic_OvcularTepesi
-[1] "Beaver"             "Dog"                "Red fox"            "Probably wild boar"
-[5] "Red deer"           "Cattle"             "Sheep and goat"     "Included goat"     
-[9] "Included sheep"     "Identified_NISP"    "Unidentified"       "Total_NR"          
-[13] "N/A"                "1"                  "3"                  "1"                 
-[17] "N/A"                "1"                  "70"                 "1"                 
-[21] "6"                  "76"                 "168"                "244"               
-[25] "N/A"                "1"                  "1"                  "2"                 
-[29] "2"                  "3"                  "97"                 "4"                 
-[33] "14"                 "14"                 "106"                "326"               
-[37] "432"                "3"                  "4"                  "1"                 
-[41] "N/A"                "4"                  "3"                  "163"               
-[45] "8"                  "27"                 "178"                "347"               
-[49] "525"                "N/A"                "-2"                 "-6"                
-[53] "2"                  "N/A"                "-2"                 "91"                
-[57] "N/A"                "N/A"                "30"                 "59"                
-[61] "N/A"                "N/A"                "-9"                 "-9"                
-[65] "-8"                 "-8"                 "-6"                 "86"                
-[69] "N/A"                "N/A"                "19"                 "70"                
-[73] "N/A"                "-6"                 "0"                  "-6"                
-[77] "N/A"                "0"                  "-6"                 "85"                
-[81] "N/A"                "N/A"                "24"                 "65"                
-[85] "N/A"               
+               Animal NumberOfRemains_1_171 NumberOfRemains_2_070
+1              Beaver                   N/A                     1
+2                 Dog                     1                     1
+3             Red fox                     3                     2
+4  Probably wild boar                     1                     2
+5            Red deer                   N/A                     3
+6              Cattle                     1                    97
+7      Sheep and goat                    70                     4
+8       Included goat                     1                    14
+9      Included sheep                     6                    14
+10    Identified_NISP                    76                   106
+11       Unidentified                   168                   326
+12           Total_NR                   244                   432
+   NumberOfRemains_8_051 Frequency_1_171 Frequency_2_070 Frequency_8_051
+1                      3             N/A             N/A              -6
+2                      4              -2              -9               0
+3                      1              -6              -9              -6
+4                    N/A               2              -8             N/A
+5                      4             N/A              -8               0
+6                      3              -2              -6              -6
+7                    163              91              86              85
+8                      8             N/A             N/A             N/A
+9                     27             N/A             N/A             N/A
+10                   178              30              19              24
+11                   347              59              70              65
+12                   525             N/A             N/A             N/A
 
 \reference{
 Berthon,R., Decaix, A., Kovács, E.Z., Van Neer, W., Tengberg, M., Willcox, G., & Cucchi, T. A bioarchaeological investigation of three late
