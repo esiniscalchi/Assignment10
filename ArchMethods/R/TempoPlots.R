@@ -7,7 +7,7 @@
 #' @export
 #' @examples
 #' MCMC_sample()
-MCMC_sample <- c("loi-mcmc", 25, 100000) # This data is arbitrary and should be used with the desired data
+MCMC_sample <- c("fileName", 25, 100000) # This data is arbitrary and should be used with the parameters of the desired data
 
 #' Read MCMC Output Function
 #'
