@@ -175,86 +175,88 @@ Berthon,R., Decaix, A., Kovács, E.Z., Van Neer, W., Tengberg, M., Willcox, G., 
 Chalcolithic pits at Ovçular Tepesi (Nakhchivan, Azerbaijan). (2013). The Journal of Human Palaeoecology 13(3), 191-200.
 }
 
-FindNumber <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36)
-> Element <- c("Pelvis", "Ulna", "Radius", "Mandible", "Mandible", "Scapula", "Scapula", "Scapula", "Calcaneum", "Talus", "Pelvis", "Carpal", "Metacarpals", "Phalanx prox A", "Tarsal", "Metatarsals", "Phalanges", "Calcaneum", "Talus", "Calcaneum", "Talus", "Scapula", "Ulna", "Radius", "Mandibule", "Pelvis", "7th cervical vertebra", "2nd thoracic vertebra", "1st thoracic vertebra", "Sesamoid P", "Calcaneum", "Phalanges", "Lower teeth", "Sesamoids P", "Sesamoids P" )
+> FindNumber <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36)
+> Element <- c("Pelvis", "Ulna", "Radius", "Mandible", "Mandible", "Scapula", "Scapula", "Scapula", "Calcaneum", "Talus", "Pelvis", "Carpal", "Metacarpals", "Phalanx prox A", "Tarsal", "Metatarsals", "Phalanges", "Calcaneum", "Talus", "Calcaneum", "Talus", "Scapula", "Ulna", "Radius", "Mandibule", "Pelvis", "7th cervical vertebra", "1nd thoracic vertebra", "2nd thoracic vertebra", "1st thoracic vertebra", "Sesamoid P", "Calcaneum", "Phalanges", "Lower teeth", "Sesamoids P", "Sesamoids P" ) 
 > Side <- c("Right", "Right", "Right", "Left", "Left", "Left", "Right", "Left", "Right", "Right", "Left", "Right", "Right", "Right", "Right", "Right", "N/A",  "Left",  "Left",  "Left",  "Left", "Right", "Right",  "Right", "Right",  "Right",  "N/A", "N/A", "N/A", "N/A", "N/A", "Right",  "N/A", "Left",  "N/A", "N/A")
 > Weight <- c(5.9, 4.7, 5.8, 11.6, 11.5, 4.8, 4.7, 4.3, 2, 1.1, 6.3, 0.8, 3.2, 1.4, 1.1, 4.9, 0.9, 1.9, 1, 1.9, 0.9, 4.3, 3.9, 5.3, 10.3, 5.5, 1.4, 1.6, 1.2, 1.3, 0.1, 2.1, 0.3, 0.2, 0.1, 0.1) 
-FusionStage <- c("Fused", "Fused P", "Fused P&D", "N/A", "N/A", "Fused D", "Fused D", "Fused D", "Fused P", "N/A", "Fused", "N/A", "Fused D", "Fused P", "N/A", "Fused D", "Fused P", "Fused P", "N/A", "Fused P", "N/A", "Fused D", "Fused P", "Fused P&D", "N/A", "Fused", "Fused P&D", "Fused P&D", "Fused P&D", "Fused P&D", "N/A", "Fused P", "Fused P", "N/A", "N/A", "N/A")
-DepositLayer <- c(1, 1, 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 1, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, "?", "Flotation upper soil", "Flotation upper soil", "Flotation upper soil", "Flotation upper soil", "Flotation upper soil")
-> FoxRemains_Chalcolithic_OvcularTepesi_Nakhchivan <- c(FindNumber, Element, Side, Weight, FusionStage, DepositLayer)
+> FusionStage <- c("Fused", "Fused P", "Fused P&D", "N/A", "N/A", "Fused D", "Fused D", "Fused D", "Fused P", "N/A", "Fused", "N/A", "Fused D", "Fused P", "N/A", "Fused D", "Fused P", "Fused P", "N/A", "Fused P", "N/A", "Fused D", "Fused P", "Fused P&D", "N/A", "Fused", "Fused P&D", "Fused P&D", "Fused P&D", "Fused P&D", "N/A", "Fused P", "Fused P", "N/A", "N/A", "N/A")
+> DepositLayer <- c(1, 1, 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 1, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, "?", "Flotation upper soil", "Flotation upper soil", "Flotation upper soil", "Flotation upper soil", "Flotation upper soil")
+> FoxRemains_Chalcolithic_OvcularTepesi_Nakhchivan <- data.frame(FindNumber, Element, Side, Weight, FusionStage, DepositLayer)
 > FoxRemains_Chalcolithic_OvcularTepesi_Nakhchivan
-[1] "1"                     "2"                     "3"                    
-[4] "4"                     "5"                     "6"                    
-[7] "7"                     "8"                     "9"                    
-[10] "10"                    "11"                    "12"                   
-[13] "13"                    "14"                    "15"                   
-[16] "16"                    "17"                    "18"                   
-[19] "19"                    "20"                    "21"                   
-[22] "22"                    "23"                    "24"                   
-[25] "25"                    "26"                    "27"                   
-[28] "28"                    "29"                    "30"                   
-[31] "31"                    "32"                    "33"                   
-[34] "34"                    "35"                    "36"                   
-[37] "Pelvis"                "Ulna"                  "Radius"               
-[40] "Mandible"              "Mandible"              "Scapula"              
-[43] "Scapula"               "Scapula"               "Calcaneum"            
-[46] "Talus"                 "Pelvis"                "Carpal"               
-[49] "Metacarpals"           "Phalanx prox A"        "Tarsal"               
-[52] "Metatarsals"           "Phalanges"             "Calcaneum"            
-[55] "Talus"                 "Calcaneum"             "Talus"                
-[58] "Scapula"               "Ulna"                  "Radius"               
-[61] "Mandibule"             "Pelvis"                "7th cervical vertebra"
-[64] "2nd thoracic vertebra" "1st thoracic vertebra" "Sesamoid P"           
-[67] "Calcaneum"             "Phalanges"             "Lower teeth"          
-[70] "Sesamoids P"           "Sesamoids P"           "Right"                
-[73] "Right"                 "Right"                 "Left"                 
-[76] "Left"                  "Left"                  "Right"                
-[79] "Left"                  "Right"                 "Right"                
-[82] "Left"                  "Right"                 "Right"                
-[85] "Right"                 "Right"                 "Right"                
-[88] "N/A"                   "Left"                  "Left"                 
-[91] "Left"                  "Left"                  "Right"                
-[94] "Right"                 "Right"                 "Right"                
-[97] "Right"                 "N/A"                   "N/A"                  
-[100] "N/A"                   "N/A"                   "N/A"                  
-[103] "Right"                 "N/A"                   "Left"                 
-[106] "N/A"                   "N/A"                   "5.9"                  
-[109] "4.7"                   "5.8"                   "11.6"                 
-[112] "11.5"                  "4.8"                   "4.7"                  
-[115] "4.3"                   "2"                     "1.1"                  
-[118] "6.3"                   "0.8"                   "3.2"                  
-[121] "1.4"                   "1.1"                   "4.9"                  
-[124] "0.9"                   "1.9"                   "1"                    
-[127] "1.9"                   "0.9"                   "4.3"                  
-[130] "3.9"                   "5.3"                   "10.3"                 
-[133] "5.5"                   "1.4"                   "1.6"                  
-[136] "1.2"                   "1.3"                   "0.1"                  
-[139] "2.1"                   "0.3"                   "0.2"                  
-[142] "0.1"                   "0.1"                   "Fused"                
-[145] "Fused P"               "Fused P&D"             "N/A"                  
-[148] "N/A"                   "Fused D"               "Fused D"              
-[151] "Fused D"               "Fused P"               "N/A"                  
-[154] "Fused"                 "N/A"                   "Fused D"              
-[157] "Fused P"               "N/A"                   "Fused D"              
-[160] "Fused P"               "Fused P"               "N/A"                  
-[163] "Fused P"               "N/A"                   "Fused D"              
-[166] "Fused P"               "Fused P&D"             "N/A"                  
-[169] "Fused"                 "Fused P&D"             "Fused P&D"            
-[172] "Fused P&D"             "Fused P&D"             "N/A"                  
-[175] "Fused P"               "Fused P"               "N/A"                  
-[178] "N/A"                   "N/A"                   "1"                    
-[181] "1"                     "1"                     "1"                    
-[184] "1"                     "1"                     "1"                    
-[187] "1"                     "1"                     "1"                    
-[190] "1"                     "1"                     "1"                    
-[193] "1"                     "1"                     "1"                    
-[196] "2"                     "3"                     "3"                    
-[199] "3"                     "3"                     "4"                    
-[202] "4"                     "4"                     "4"                    
-[205] "4"                     "4"                     "4"                    
-[208] "4"                     "4"                     "?"                    
-[211] "Flotation upper soil"  "Flotation upper soil"  "Flotation upper soil" 
-[214] "Flotation upper soil"  "Flotation upper soil" 
+   FindNumber               Element  Side Weight FusionStage
+1           1                Pelvis Right    5.9       Fused
+2           2                  Ulna Right    4.7     Fused P
+3           3                Radius Right    5.8   Fused P&D
+4           4              Mandible  Left   11.6         N/A
+5           5              Mandible  Left   11.5         N/A
+6           6               Scapula  Left    4.8     Fused D
+7           7               Scapula Right    4.7     Fused D
+8           8               Scapula  Left    4.3     Fused D
+9           9             Calcaneum Right    2.0     Fused P
+10         10                 Talus Right    1.1         N/A
+11         11                Pelvis  Left    6.3       Fused
+12         12                Carpal Right    0.8         N/A
+13         13           Metacarpals Right    3.2     Fused D
+14         14        Phalanx prox A Right    1.4     Fused P
+15         15                Tarsal Right    1.1         N/A
+16         16           Metatarsals Right    4.9     Fused D
+17         17             Phalanges   N/A    0.9     Fused P
+18         18             Calcaneum  Left    1.9     Fused P
+19         19                 Talus  Left    1.0         N/A
+20         20             Calcaneum  Left    1.9     Fused P
+21         21                 Talus  Left    0.9         N/A
+22         22               Scapula Right    4.3     Fused D
+23         23                  Ulna Right    3.9     Fused P
+24         24                Radius Right    5.3   Fused P&D
+25         25             Mandibule Right   10.3         N/A
+26         26                Pelvis Right    5.5       Fused
+27         27 7th cervical vertebra   N/A    1.4   Fused P&D
+28         28 1nd thoracic vertebra   N/A    1.6   Fused P&D
+29         29 2nd thoracic vertebra   N/A    1.2   Fused P&D
+30         30 1st thoracic vertebra   N/A    1.3   Fused P&D
+31         31            Sesamoid P   N/A    0.1         N/A
+32         32             Calcaneum Right    2.1     Fused P
+33         33             Phalanges   N/A    0.3     Fused P
+34         34           Lower teeth  Left    0.2         N/A
+35         35           Sesamoids P   N/A    0.1         N/A
+36         36           Sesamoids P   N/A    0.1         N/A
+           DepositLayer
+1                     1
+2                     1
+3                     1
+4                     1
+5                     1
+6                     1
+7                     1
+8                     1
+9                     1
+10                    1
+11                    1
+12                    1
+13                    1
+14                    1
+15                    1
+16                    1
+17                    2
+18                    3
+19                    3
+20                    3
+21                    3
+22                    4
+23                    4
+24                    4
+25                    4
+26                    4
+27                    4
+28                    4
+29                    4
+30                    4
+31                    ?
+32 Flotation upper soil
+33 Flotation upper soil
+34 Flotation upper soil
+35 Flotation upper soil
+36 Flotation upper soil
 
 \reference{
 Berthon, R. (2017). A ritual deposit of fox remains at Ovçular Tepesi (Nakhchivan, Azerbaijan) and its relation with the pastoral nature of Late Chalcolithic communities. Journal of Archaeological Science, 1-7.
