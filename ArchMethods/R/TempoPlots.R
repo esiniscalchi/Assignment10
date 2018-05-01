@@ -7,7 +7,7 @@
 #' @export
 #' @examples
 #' MCMC_sample()
-MCMC_sample <- c("fileName", 25, 100000) # This data is arbitrary and should be used with the parameters of the desired data
+MCMC_sample <- c("fileName", 25, 100000) # These numbers are arbitrary and should be used with the parameters of the desired data
 
 #' Read MCMC Output Function
 #'
@@ -17,7 +17,7 @@ MCMC_sample <- c("fileName", 25, 100000) # This data is arbitrary and should be 
 #' @examples
 #' mcmc()
 # Read the MCMC output
-mcmc <- c(readr::read_csv("loi-mcmc.csv")
+mcmc <- c(readr::read_csv("fileName.csv")
           
 #' List Names for Mcmc Output Function
 #'
@@ -64,9 +64,9 @@ calc.tempo <- function(mcmc.data, by.int, out.file="") {
 #' @examples
 #' plot.tempo()
 plot.tempo <- function(tempo.data = NULL, in.file = "",  out.file = "", max.x = NA,
-                       min.x = NA, y.label = "Cumulative Events",
-                       x.label = "Calendar Year", plot.ht = 7,
-                       plot.wi = 7){
+                       min.x = NA, y.label = " ",
+                       x.label = " ", plot.ht = ,
+                       plot.wi = ){
   library(ggplot2)
   if (is.null(tempo.data)){
     if (in.file == ""){
