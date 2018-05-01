@@ -35,4 +35,4 @@ Burke, A. (n.d.). Using R to analyse occupation as a function of geographical va
 Elizabeth Siniscalchi
 }
 \note{
-These functions are intended to be generic so that they may be used by anyone rather than with a specific set of archaeological data.
+These functions are intended to be generic so that they may be used by any data rather than with a specific set of archaeological data.
