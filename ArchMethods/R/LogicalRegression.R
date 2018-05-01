@@ -7,7 +7,7 @@
 #' @export
 #' @examples
 #' fileName()
-fileName <- "File.csv" # Set file name
+fileName <- "File.csv"
 
 #' Data Reading Function
 #'
@@ -16,7 +16,7 @@ fileName <- "File.csv" # Set file name
 #' @export
 #' @examples
 #' dat()
-dat <- read.csv(fileName, header=T) # Read in data
+dat <- read.csv(fileName, header=T)
 head(dat) # View/check data
 
 library(ggplot2)
