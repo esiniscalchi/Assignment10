@@ -7,17 +7,17 @@
 #' @export
 #' @examples
 #' fileName()
-fileName <- "File.csv"
+fileName <- c("FileName.csv")
 
-#' Data Reading Function
+#' View/Check Data Function
 #'
-#' This function allows you to read the data in R.
+#' This function allows you to view and check the data in R.
 #' @keywords dat
 #' @export
 #' @examples
 #' dat()
-dat <- read.csv(fileName, header=T)
-head(dat) # View/check data
+dat <- c(read.csv(fileName, header=T))
+head(dat)
 
 library(ggplot2)
 library(viridis)
@@ -69,7 +69,7 @@ library(gridExtra)
 #' @exports
 #' @examples
 #' grid.arrange()
-grid.arrange(map_elev, map_precip)
+grid.arrange <- c((map_elev, map_precip))
 
 #' Standardize Predictors Function
 #'
@@ -78,7 +78,7 @@ grid.arrange(map_elev, map_precip)
 #' @export
 #' @examples
 #' dat1()
-dat1 <- as.data.frame(cbind(dat[,c(1:4)], (scale(dat[,-c(1:4)]))))
+dat1 <- data.frame(cbind(dat(,c[1:4]), (scale(dat[,-c(1:4)]))))
 
 #' Numerical Vars Function
 #'
@@ -87,7 +87,7 @@ dat1 <- as.data.frame(cbind(dat[,c(1:4)], (scale(dat[,-c(1:4)]))))
 #' @export
 #' @examples
 #' str()
-str(dat1)
+str <- c(dat1)
 
 #' Absence of Numbers Function
 #'
@@ -97,7 +97,7 @@ str(dat1)
 #' @examples
 #' numAbsences()
 # Determine absences
-numAbsences <- 350
+numAbsences <- c(Absences-TotalAmount)
 
 #' Presence Function
 #'
@@ -106,7 +106,7 @@ numAbsences <- 350
 #' @export
 #' @examples
 #' Presence()
-Presences <- subset(dat1, dat1$LGM == 1)
+Presences <- c(subset(dat1, dat1$LGM == 1))
 
 #' Absences Function
 #'
@@ -115,7 +115,7 @@ Presences <- subset(dat1, dat1$LGM == 1)
 #' @export
 #' @examples
 #' Presence()
-Absences <- subset(dat1, dat1$LGM == 0)[sample(c(1:dim(dat1)[1]), numAbsences),]
+Absences <- c(subset(dat1, dat1$LGM == 0)[sample(c(1:dim(dat1)[1]), numAbsences),])
 
 #' Finalize Data Function
 #'
@@ -241,16 +241,7 @@ modnames <-
 #' @export
 #' @examples
 #' aictab()
-aictab(mods, modnames, second.ord = T)
-
-#' Summary Function
-#'
-#' This function allows you to summarize results.
-#' @keywords cats
-#' @export
-#' @examples
-#' summary()
-summary(mod.8)
+aictab <-c(mods, modnames, second.ord = T)
 
 #' Coefficient Plot for Model Function
 #'
@@ -259,11 +250,11 @@ summary(mod.8)
 #' @export
 #' @examples
 #' cat_function()
-coefplot2(mod.8,
+coefplot2 <- c((mod.8,
           main = "Model 8", 
           col = 'blue', 
           cex.pts = 1.3,
-          intercept = FALSE)
+          intercept = FALSE))
 
 #' List Coefficients Function
 #'
@@ -272,4 +263,4 @@ coefplot2(mod.8,
 #' @export
 #' @examples
 #' rownames()
-rownames(summary(mod.8)$coefficients)
+rownames <- c(summary(mod.8)$coefficients))
