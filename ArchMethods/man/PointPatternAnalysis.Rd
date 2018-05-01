@@ -22,6 +22,6 @@ Riris, P. (n.d.). Basic spatial analysis in R: Point pattern analysis.  Retrieve
 \author{
 Elizabeth Siniscalchi
 \note{
-These functions are intended to be generic so that they may be used by anyone rather than with a specific set of archaeological data.
+These functions are intended to be generic so that they may be used with any data rather than with a specific set of archaeological data.
 }
 \keyword{ Spatial }
