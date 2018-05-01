@@ -19,9 +19,9 @@ MCMC_sample <- c("loi-mcmc", 25, 100000) # This data is arbitrary and should be 
 # Read the MCMC output
 mcmc <- c(readr::read_csv("loi-mcmc.csv")
           
-#' Lists Names for Mcmc Output Function
+#' List Names for Mcmc Output Function
 #'
-#' This function allows you to lists names for mcmc output.
+#' This function allows you to list names for mcmc output.
 #' @keywords MCMC, output, list, names
 #' @export
 #' @examples
@@ -30,14 +30,14 @@ names <- c(mcmc(make.names(names(mcmc)))
 
 #' Column of Names for Mcmc Output Function
 #'
-#' This function allows you to creates a column of names for mcmc output.
+#' This function allows you to create a column of names for mcmc output.
 #' @keywords
 #' @export
 #' @examples
 #' colnames()
 colnames <- c(mcmc)
 
-#' calc.tempo Function
+#' Tempo Plot Function
 #'
 #' This function allows you to calculate the tempo plot.
 #' @keywords tempo, plot, calculate
